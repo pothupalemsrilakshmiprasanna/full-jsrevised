@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+function myfunction(){
+    let x=document.getElementById("fname");
+    document.getElementById("demo").innerHTML=x.value;
+}
+
+// oninput -- write something in the text field to trigger a function
+//onselect-- select something
+//oninvalid-- when enter invalid data enter
+
+    </script>
+</head>
+<body>
+    <p id="demo"></P>
+   <input type = "search"  name="fname" id="fname" onsearch="myfunction()">
+    
+</body>
+</html>

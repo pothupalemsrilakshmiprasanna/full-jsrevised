@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Reduce DOM Access
+    Accessing the HTML DOM is very slow, compared to other JavaScript statements.
+    
+    If you expect to access a DOM element several times, access it once, and use it as a local variable:
+
+    Avoid Unnecessary Variables
+
+    Delay JavaScript Loading
+
+    Accidentally Using the Assignment Operator
+
+    You must use a "backslash" if you must break a statement in a string:
+    What is JSON?
+    JSON stands for JavaScript Object Notation
+    JSON is a lightweight data interchange format
+    JSON is language independent *
+    JSON is "self-describing" and easy to understand
+
+    Then, use the JavaScript built-in function JSON.parse() to convert the string into a JavaScript object:
+
+    const obj = JSON.parse(text);
+
+<script>
+let text = '{ "employees" : [' +
+'{ "firstName":"John" , "lastName":"Doe" },' +
+'{ "firstName":"Anna" , "lastName":"Smith" },' +
+'{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+
+
+class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+}
+
+
+
+
+
+
+
+
+</script>
+
+JavaScript Class Syntax
+
+
+
+
+</body>
+</html>

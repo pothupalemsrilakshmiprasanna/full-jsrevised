@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body onload="checkCookies()">
+
+<h1>JavaScript HTML Events</h1>
+<h2>The onload Attribute</h2>
+
+<p id="demo"></p>
+<button id="myBtn">Try it</button>
+element.addEventListener(event, function, useCapture);
+<script>
+function checkCookies() {
+  let text = "";
+  if (navigator.cookieEnabled == true) {
+    text = "Cookies are enabled.";
+  } else {
+    text = "Cookies are not enabled.";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+
+var x = document.getElementById("myBtn");
+x.addEventListener("click", myFunction);
+x.addEventListener("click", someOtherFunction);
+
+function myFunction() {
+  alert ("Hello World!");
+}
+
+function someOtherFunction() {
+  alert ("This function was also executed!");
+}
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html> 

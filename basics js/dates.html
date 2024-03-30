@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="prasu"></p>
+    <p id="hi"></p>
+    <p id="nanna"></p>
+    <p id="hello"></p>
+    <p id="happy"> </p>
+    <p id="single"></p>
+    <p id="kin"></p>
+    <p id="k"></p>
+    <p id="l"></p>
+    <p id="m"></p>
+    <p id="n"></p>
+    <p id="o"></p>
+    new Date() creates a date object with the current date and time:</br>
+    When you display a date object in HTML, it is automatically converted to a string, with the toString() method.</br>
+    The toDateString() method converts a date to a more readable format:</br>
+    The toUTCString() method converts a date to a string using the UTC standard:</br>
+    The toISOString() method converts a date to a string using the ISO standard:</br>
+    JavaScript Date Input</br>
+    There are generally 3 types of JavaScript date input formats:</br>
+    
+    Type	Example</br>
+    ISO Date	"2015-03-25" (The International Standard)</br>
+    Short Date	"03/25/2015"</br>
+    Long Date	"Mar 25 2015" or "25 Mar 2015"</br>
+    The ISO 8601 syntax (YYYY-MM-DD) is also the preferred JavaScript date format:</br>
+    ISO dates can be written with added hours, minutes, and seconds (YYYY-MM-DDTHH:MM:SSZ):</br>
+    If you want to modify the time relative to UTC, remove the Z and add +HH:MM or -HH:MM instead:</br>
+    JavaScript Short Dates.</br>
+Short dates are written with an "MM/DD/YYYY" syntax like this:</br>
+In some browsers, months or days with no leading zeroes may produce an error:</br>
+
+The behavior of "YYYY/MM/DD" is undefined.</br>
+Some browsers will try to guess the format. Some will return NaN.</br>
+The behavior of  "DD-MM-YYYY" is also undefined.</br>
+Some browsers will try to guess the format. Some will return NaN.</br>
+
+JavaScript Long Dates.</br>
+Long dates are most often written with a "MMM DD YYYY" syntax like this:</br>
+Month and day can be in any order:</br>
+And, month can be written in full (January), or abbreviated (Jan):</br>
+
+Commas are ignored. Names are case insensitive:</br>
+
+Date.parse() method to convert it to milliseconds.</br>
+You can then use the number of milliseconds to convert it to a date object:</br>
+
+getFullYear()	Get year as a four digit number (yyyy)</br>
+getMonth()	Get month as a number (0-11)</br>
+getDate()	Get day as a number (1-31)</br>
+getDay()	Get weekday as a number (0-6)</br>
+getHours()	Get hour (0-23)</br>
+getMinutes()	Get minute (0-59)</br>
+getSeconds()	Get second (0-59)</br>
+getMilliseconds()	Get millisecond (0-999)</br>
+getTime()	Get time (milliseconds since January 1, 1970)</br>
+You can use an array of names to return the month as a name:</br>
+Date.now() returns the number of milliseconds since January 1, 1970.</br>
+UTC Date Get Methods</br>
+Method	Same As	Description</br>
+getUTCDate()	getDate()	Returns the UTC date</br>
+getUTCFullYear()	getFullYear()	Returns the UTC year</br>
+getUTCMonth()	getMonth()	Returns the UTC month</br>
+getUTCDay()	getDay()	Returns the UTC day</br>
+getUTCHours()	getHours()	Returns the UTC hour</br>
+getUTCMinutes()	getMinutes()	Returns the UTC minutes</br>
+getUTCSeconds()	getSeconds()	Returns the UTC secondsv</br>
+getUTCMilliseconds()	getMilliseconds()	Returns the UTC milliseconds</br>
+The getTimezoneOffset() Method</br>
+The getTimezoneOffset() method returns the difference (in minutes) between local time an UTC time:</br>
+
+Set Date Methods</br>
+Set Date methods are used for setting a part of a date:</br>
+
+Method	Description</br>
+setDate()	Set the day as a number (1-31)</br>
+setFullYear()	Set the year (optionally month and day)</br>
+setHours()	Set the hour (0-23)</br>
+setMilliseconds()	Set the milliseconds (0-999)</br>
+setMinutes()	Set the minutes (0-59)</br>
+setMonth()	Set the month (0-11)</br>
+setSeconds()	Set the seconds (0-59)</br>
+setTime()	Set the time (milliseconds since January 1, 1970)</br>
+    <script>
+        //const d= new Date(year,month,date,hour,minutes,seconds,milliseconds );
+        const d = new Date();
+document.getElementById("demo").innerHTML = d.toString();
+const de = new Date();
+document.getElementById("prasu").innerHTML = de.toDateString();
+const f = new Date();
+document.getElementById("hi").innerHTML = f.toUTCString();
+const g = new Date();
+document.getElementById("nanna").innerHTML = g.toISOString();
+const h = new Date("2015-03-25");
+document.getElementById("hello").innerHTML = h;
+
+const j = new Date("2015-03-25T12:00:00Z");
+document.getElementById("happy").innerHTML = j;
+document.getElementById("single").innerHTML =
+new Date("2015-03-25T12:00:00-06:00");
+const k = new Date("Mar 25 2015");
+document.getElementById("kin").innerHTML = k;
+const msec = Date.parse("March 21, 2012");
+document.getElementById("k").innerHTML = msec;
+
+const dr = new Date("2021-03-25")
+document.getElementById("l").innerHTML = dr.getFullYear();
+// remaining all same like this
+const df = new Date();
+document.getElementById("m").innerHTML = df.getTimezoneOffset();
+const dg = new Date();
+d.setFullYear(2020);
+document.getElementById("n").innerHTML = dg;
+const dge = new Date();
+d.setMonth(11);
+document.getElementById("o").innerHTML = dge;
+
+    </script>
+    
+
+
+
+
+</body>
+</html>

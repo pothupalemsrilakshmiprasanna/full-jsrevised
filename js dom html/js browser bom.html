@@ -1,0 +1,580 @@
+
+1) js window
+
+window.open() - open a new window
+window.close() - close the current window
+window.moveTo() - move the current window
+window.resizeTo() - resize the current window
+
+2) JavaScript Window Screen
+The window.screen object contains information about the user's screen.
+
+ 1  Window Screen Width
+   The screen.width property returns the width of the visitor's screen in pixels
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 
+"Screen width is " + screen.width;
+</script>
+
+</body>
+</html>
+  
+
+Screen width is 1536
+
+
+ 2   Window Screen Height
+The screen.height property returns the height of the visitor's screen in pixels.
+
+ <!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 
+"Screen height is " + screen.height;
+</script>
+
+</body>
+</html>
+Screen height is 864
+3  Window Screen Available Width
+The screen.availWidth property returns the width of the visitor's screen, in pixels, minus interface features like the Windows Taskbar.
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 
+"Available screen width is " + screen.availWidth;
+</script>
+
+</body>
+</html>
+
+Available screen width is 1536
+
+4  Window Screen Available Height
+The screen.availHeight property returns the height of the visitor's screen, in pixels, minus interface features like the Windows Taskbar.
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 
+"Available screen height is " + screen.availHeight;
+</script>
+
+</body>
+</html>
+Available screen height is 816
+
+5  Window Screen Color Depth
+The screen.colorDepth property returns the number of bits used to display one color.
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 
+"Screen color depth is " + screen.colorDepth;
+</script>
+
+</body>
+</html>
+Screen color depth is 24
+
+6 Window Screen Pixel Depth
+The screen.pixelDepth property returns the pixel depth of the screen.
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 
+"Screen pixel depth is " + screen.pixelDepth;
+</script>
+
+</body>
+</html>
+Screen pixel depth is 24
+
+
+
+
+
+3) JavaScript Window Location
+
+The window.location object can be used to get the current page address (URL) and to redirect the browser to a new page.
+
+window.location.href returns the href (URL) of the current page
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript</h2>
+
+<h3>The window.location object</h3>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 
+"The full URL of this page is:<br>" + window.location.href;
+</script>
+
+</body>
+
+JavaScript
+The window.location object
+The full URL of this page is:
+https://www.w3schools.com/js/tryit.asp?filename=tryjs_loc_href
+
+
+
+window.location.hostname returns the domain name of the web host
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript</h2>
+
+<h3>The window.location object</h3>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 
+"Page hostname is: " + window.location.hostname;
+</script>
+
+</body>
+</html>
+JavaScript
+The window.location object
+Page hostname is: www.w3schools.com
+
+
+window.location.pathname returns the path and filename of the current page
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript</h2>
+
+<h3>The window.location object</h3>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"Page path is: " + window.location.pathname;
+</script>
+
+</body>
+</html>
+JavaScript
+The window.location object
+Page path is: /js/tryit.asp
+window.location.protocol returns the web protocol used (http: or https:)
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript</h2>
+
+<h3>The window.location object</h3>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"The page protocol is: " + window.location.protocol;
+</script>
+
+</body>
+</html>
+JavaScript
+The window.location object
+The page protocol is: https:
+
+
+
+window.location.assign() loads a new document
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript</h2>
+
+<h3>The window.location object</h3>
+
+<input type="button" value="Load new document" onclick="newDoc()">
+
+<script>
+function newDoc() {
+  window.location.assign("https://www.w3schools.com")
+}
+</script>
+
+</body>
+</html>
+JavaScript
+The window.location object
+
+
+
+
+Window Location Port
+The window.location.port property returns the number of the internet host port (of the current page).
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript</h2>
+
+<h3>The window.location object</h3>
+
+<p id="demo"></p>
+
+<p><b>Note: </b>If the port number is default (80 for http and 443 for https), most browsers will display 0 or nothing.</p>
+
+<script>
+document.getElementById("demo").innerHTML = 
+"The URL port number of the current page is: " + window.location.port;
+</script>
+
+</body>
+</html>
+JavaScript
+The window.location object
+The URL port number of the current page is:
+
+Note: If the port number is default (80 for http and 443 for https), most browsers will display 0 or nothing.
+
+4)JavaScript Window History
+
+The window.history object contains the browsers history.
+
+history.back() - same as clicking back in the browser
+<html>
+<head>
+<script>
+function goBack() {
+  window.history.back()
+}
+</script>
+</head>
+<body>
+
+<input type="button" value="Back" onclick="goBack()">
+
+</body>
+</html>
+
+history.forward() - same as clicking forward in the browser
+
+<html>
+<head>
+<script>
+function goForward() {
+  window.history.forward()
+}
+</script>
+</head>
+<body>
+
+<input type="button" value="Forward" onclick="goForward()">
+
+</body>
+</html>
+
+
+
+
+5)JavaScript Window Navigator
+The window.navigator object contains information about the visitor's browser.
+
+Browser Cookies
+
+1navigator.cookieEnabled:
+The cookieEnabled property returns true if cookies are enabled, otherwise false:
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The Navigator Object</h2>
+
+<p>The cookieEnabled property returns true if cookies are enabled:</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"navigator.cookieEnabled is " + navigator.cookieEnabled;
+</script>
+
+</body>
+</html>
+The Navigator Object
+The cookieEnabled property returns true if cookies are enabled:
+
+navigator.cookieEnabled is true
+
+2The appName property returns the application name of the browser:
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The Navigator Object</h2>
+
+<p>The appName property returns the application name of the browser:</p>
+
+<p id="demo"></p>
+
+<p>Strange enough, "Netscape" is the application name for IE11, Chrome, Firefox, and Safari.</p>
+
+<script>
+document.getElementById("demo").innerHTML = 
+"navigator.appName is " + navigator.appName;
+</script>
+
+</body>
+</html>
+The Navigator Object
+The appName property returns the application name of the browser:
+
+navigator.appName is Netscape
+
+Strange enough, "Netscape" is the application name for IE11, Chrome, Firefox, and Safari.
+
+3navigator.appCodeName
+The appCodeName property returns the application code name of the browser:
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Navigator</h2>
+
+<p>The appCodeName property returns the code name of the browser.</p>
+
+<p>Do not rely on it! "Mozilla" is the application code name for Chrome, Firefox, IE, Safari, and Opera.</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 
+"navigator.appCodeName is " + navigator.appCodeName;
+</script>
+
+</body>
+</html>
+JavaScript Navigator
+The appCodeName property returns the code name of the browser.
+
+Do not rely on it! "Mozilla" is the application code name for Chrome, Firefox, IE, Safari, and Opera.
+
+navigator.appCodeName is Mozilla
+
+
+5The Browser Engine
+The product property returns the product name of the browser engine:
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The Navigator Object</h2>
+
+<p>The product property returns the product name of the browser.</p>
+
+<p>Do not rely on it! Most browsers returns "Gecko" as product name!</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"navigator.product is " + navigator.product;
+</script>
+
+</body>
+</html>
+
+The Navigator Object
+The product property returns the product name of the browser.
+
+Do not rely on it! Most browsers returns "Gecko" as product name!
+
+navigator.product is Gecko
+
+6The Browser Version
+The appVersion property returns version information about the browser:
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The Navigator Object</h2>
+
+<p>The appVersion property returns version information about the browser:</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = navigator.appVersion;
+</script>
+
+</body>
+</html>
+
+The Navigator Object
+The appVersion property returns version information about the browser:
+
+5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+
+7The Browser Agent
+The userAgent property returns the user-agent header sent by the browser to the server:
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The Navigator Object</h2>
+
+<p>The userAgent property returns the user-agent header sent by the browser to the server:</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+navigator.userAgent;
+</script>
+
+</body>
+</html>
+The Navigator Object
+The userAgent property returns the user-agent header sent by the browser to the server:
+
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+
+8navigator.platform
+
+The platform property returns the browser platform (operating system):
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The Navigator Object</h2>
+
+<p>The platform property returns the browser platform (operating system):</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 
+"navigator.platform is " + navigator.platform;
+</script>
+
+</body>
+</html>
+
+The Navigator Object
+The platform property returns the browser platform (operating system):
+
+navigator.platform is Win32
+
+9The Browser Language
+The language property returns the browser's language:
+
+Is The Browser Online?
+The onLine property returns true if the browser is online:
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The Navigator Object</h2>
+
+<p>The onLine property returns true if the browser is online:</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"navigator.onLine is " + navigator.onLine;
+</script>
+
+</body>
+</html>
+
+The Navigator Object
+The onLine property returns true if the browser is online:
+
+navigator.onLine is true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
