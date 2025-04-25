@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+const cars = ["BMW", "Volvo", "Saab", "Ford"];
+
+let i = 0;
+let text = "";
+for (;cars[i];) {
+  text += cars[i] + "<br>";
+  i++;
+}
+
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript While Loop</h2>
+
+<p id="demo"></p>
+
+<script>
+let text = "";
+let i = 0;
+while (i < 10) {
+  text += "<br>The number is " + i;
+  i++;
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The forEach() Method</h2>
+
+<p>Call a function once for each array element:</p>
+
+<p id="demo"></p>
+
+<script>
+const numbers = [45, 4, 9, 16, 25];
+
+let txt = "";
+numbers.forEach(myFunction);
+document.getElementById("demo").innerHTML = txt;
+
+function myFunction(value) {
+  txt += value + "<br>"; 
+}
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Functions</h1>
+<h2>Callback Functions</h2>
+
+<p>The result of the calculation is:</p>
+<p id="demo"></p>
+
+<script>
+function myDisplayer(something) {
+  document.getElementById("demo").innerHTML = something;
+}
+
+function myCalculator(num1, num2, myCallback) {
+  let sum = num1 + num2;
+  myCallback(sum);
+}
+
+myCalculator(5, 5, myDisplayer);
+</script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript async / await</h1>
+<h2 id="demo"></h2>
+
+<script>
+async function myDisplay() {
+  let myPromise = new Promise(function(resolve, reject) {
+    resolve("I love You !!");
+  });
+  document.getElementById("demo").innerHTML = await myPromise;
+}
+
+myDisplay();
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript async / await</h1>
+<p id="demo"></p>
+
+<script>
+function myDisplayer(some) {
+  document.getElementById("demo").innerHTML = some;
+}
+
+async function myFunction() {return "Hello";}
+
+myFunction().then(
+  function(value) {myDisplayer(value);}
+);
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript async / await</h1>
+<h2 id="demo"></h2>
+
+<script>
+async function myDisplay() {
+  let myPromise = new Promise(function(resolve) {
+    resolve("I love You !!");
+  });
+  document.getElementById("demo").innerHTML = await myPromise;
+}
+
+myDisplay();
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
